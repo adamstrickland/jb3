@@ -51,23 +51,23 @@ ssh_options[:keys] = "~/.ssh/id_rsa"
 # end
 
 # Passenger+Apache
-# namespace :deploy do
-# 	task :start do
-# 	end
+namespace :deploy do
+	task :start do
+	end
 
-# 	task :stop do
-# 	end
+	task :stop do
+	end
 
-# 	desc "Restart the application"
-# 	task :restart, :roles => :app, :except => { :no_release => true } do
-# 		run "#{try_sudo} touch #{File.join(current_path, 'tmp', 'restart.txt')}"
-# 	end
+	desc "Restart the application"
+	task :restart, :roles => :app, :except => { :no_release => true } do
+		run "#{try_sudo} touch #{File.join(current_path, 'tmp', 'restart.txt')}"
+	end
 
 # 	desc "Copy the database.yml file into the latest release"
 # 	task :copy_in_database_yml do
 # 		run "cp #{shared_path}/config/database.yml #{latest_release}/config/"
 # 	end
-# end
+end
 # before "deploy:assets:precompile", "deploy:copy_in_database_yml"
 
 # role :web, "your web-server here"                          # Your HTTP server, Apache/etc
