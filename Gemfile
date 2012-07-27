@@ -6,6 +6,7 @@ gem 'jquery-rails' # jquery
 gem 'devise' # authentication
 # gem 'jbuilder' # To use Jbuilder templates for JSON
 gem 'unicorn' # Use unicorn as the web server
+gem 'therubyracer' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
 group :tools do
 	gem 'capistrano' # Deploy with Capistrano
@@ -24,6 +25,5 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  # gem 'therubyracer' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'uglifier', '>= 1.0.3'
 end
